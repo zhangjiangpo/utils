@@ -1,0 +1,24 @@
+{
+  "name": "@zjp/session-store",
+  "version": "0.0.1",
+  "description": "vuex sessionStorage",
+  "main": "./lib/index.js",
+  "publishConfig": {
+    "access": "public"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/zhangjiangpo/utils.git",
+    "directory": "packages/vuex-session-storage"
+  },
+  "scripts": {
+    "build": "webpack --progress",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "vuex",
+    "sessionStorage"
+  ],
+  "author": "zhangjiangpo",
+  "license": "ISC"
+}
