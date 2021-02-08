@@ -1,8 +1,15 @@
 {
   "name": "@zhangjiangpo/utils",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "description": "work utils ",
   "main": "lib/index.js",
+  "publishConfig": {
+    "access": "public"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/zhangjiangpo/utils.git"
+  },
   "scripts": {
     "build": "webpack --progress",
     "test": "echo \"Error: no test specified\" && exit 1"

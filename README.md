@@ -6,10 +6,17 @@ vuex + sessionStorage websocket ws log
 
 # 全量引用
 ```javascript
-import ZjpUtils from '@zjp/utils'
+npm i @zhangjiangpo/utils
+
+import ZjpUtils from '@zhangjiangpo/utils'
+// ZjpUtils.SessionStore
+// or
+import { SessionStore } from '@zhangjiangpo/utils'
 ```
 
 # 按需引用
 ```javascript
-import SessionStore from '@zjp/session-store'
+npm i @zhangjiangpo/session-store
+
+import SessionStore from '@zhangjiangpo/session-store'
 ```
