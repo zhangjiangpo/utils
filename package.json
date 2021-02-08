@@ -1,5 +1,5 @@
 {
-  "name": "@zjp/utils",
+  "name": "@zhangjiangpo/utils",
   "version": "0.0.1",
   "description": "work utils ",
   "main": "lib/index.js",

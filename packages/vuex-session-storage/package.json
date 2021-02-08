@@ -1,5 +1,5 @@
 {
-  "name": "@zjp/session-store",
+  "name": "@zhangjiangpo/session-store",
   "version": "0.0.1",
   "description": "vuex sessionStorage",
   "main": "./lib/index.js",
