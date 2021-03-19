@@ -1,0 +1,24 @@
+{
+  "name": "@zhangjiangpo/web-socket",
+  "version": "0.0.1",
+  "description": "socket webSocket close reconnect",
+  "main": "./lib/index.js",
+  "publishConfig": {
+    "access": "public"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/zhangjiangpo/utils.git",
+    "directory": "packages/web-socket"
+  },
+  "scripts": {
+    "build": "webpack --progress",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "socket",
+    "webSocket"
+  ],
+  "author": "zhangjiangpo",
+  "license": "ISC"
+}
