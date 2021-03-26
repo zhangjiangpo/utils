@@ -1,31 +1,46 @@
 /*
  * @Author: zhangjiangpo 
  * @Date: 2021-03-19 19:00:18 
- * @Last Modified by:    
- * @Last Modified time: 2021-03-19 19:00:18 
+ * @Last Modified by: 
+ * @Last Modified time: 2021-03-26 15:56:59
  */
+var decorator = {
+  /**
+   * class function and return must be Promise
+   * @param {*} delay 
+   */
+  throttle(delay){
+    return (target, key, descriptor) => {
+      let mt = descriptor.value;
+      //ctx 为null时， 取运行时的this 即class实例对象
+      descriptor.value = throttle(null, mt, delay)
+      return descriptor;
+    }
+  }
+}
 /**
- * 防抖
+ * 节流 return must be Promise
  * @param {*} ctx 上下文 
  * @param {*} fn 
  * @param {*} delay 
  */
-function debounce(ctx, fn, delay){
+function throttle(ctx, fn, delay){
   let timer = null
-  return function (){
-    var arg = [].slice.call(arguments)
+  return function (...arg){
     return new Promise((resolve, reject) => {
       if(timer){
-        console.log("debounce do")
+        console.log("throttle do")
       } else {
         timer = setTimeout(() => {
+          timer && clearTimeout(timer)
           timer = null
-          fn && fn.apply(ctx, arg).then(() => {
-            resolve();
-          }, () => {
-            reject();
+          fn && fn.call(ctx || this, ...arg).then((res) => {
+            resolve(res);
+          }, (err) => {
+            reject(err);
           }).catch(e => {
-            console.error('debounce error' + JSON.stringify(e), e)
+            console.error('throttle error' + JSON.stringify(e), e)
+            throw new Error(e && e.message)
           })
         }, delay)
       }
@@ -33,5 +48,6 @@ function debounce(ctx, fn, delay){
   }
 }
 export default {
-  debounce
+  throttle,
+  decorator
 }

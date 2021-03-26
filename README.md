@@ -9,14 +9,16 @@ vuex + sessionStorage websocket ws log
 npm i @zhangjiangpo/utils
 
 import ZjpUtils from '@zhangjiangpo/utils'
-// ZjpUtils.SessionStore
+// ZjpUtils.SessionStore ZjpUtils.Socket
 // or
-import { SessionStore } from '@zhangjiangpo/utils'
+import { SessionStore, Socket } from '@zhangjiangpo/utils'
 ```
 
 # 按需引用
 ```javascript
 npm i @zhangjiangpo/session-store
-
 import SessionStore from '@zhangjiangpo/session-store'
+
+npm i @zhangjiangpo/web-socket
+import Socket from '@zhangjiangpo/web-socket'
 ```

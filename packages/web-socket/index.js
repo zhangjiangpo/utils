@@ -2,10 +2,10 @@
  * @Author: zhangjiangpo 
  * @Date: 2021-03-19 19:00:12 
  * @Last Modified by: 
- * @Last Modified time: 2021-03-19 19:02:05
+ * @Last Modified time: 2021-03-26 16:25:12
  */
 
-import {debounce} from '../../common'
+import {throttle} from '../../common'
 /**
  * 获取配置信息
  * @param {*} option 业务侧配置
@@ -66,8 +66,8 @@ export default class Socket {
     this._onceEventQueue = {}
     this.initTimeouter = null
 
-    //防抖重连 状态为非1
-    this._reconnect = debounce(this, (reason) => {
+    //节流重连 状态为非1
+    this._reconnect = throttle(this, (reason) => {
       if(!this.isStateOK()){
         this._reconnectCount++
         this._initSocket()
