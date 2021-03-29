@@ -2,7 +2,7 @@
  * @Author: zhangjiangpo 
  * @Date: 2021-03-19 19:00:18 
  * @Last Modified by: 
- * @Last Modified time: 2021-03-26 15:56:59
+ * @Last Modified time: 2021-03-29 14:51:07
  */
 var decorator = {
   /**
@@ -46,6 +46,10 @@ function throttle(ctx, fn, delay){
       }
     })
   }
+}
+export {
+  throttle,
+  decorator
 }
 export default {
   throttle,
